@@ -1,0 +1,20 @@
+.word {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: .5rem 1rem;
+  border: 1px solid #cccccc;
+  margin-bottom: .5rem;
+}
+
+input {
+  margin: 0 15px;
+}
+
+.corrected {
+  background: darkseagreen;
+}
+
+.uncorrected {
+  background: indianred;
+}

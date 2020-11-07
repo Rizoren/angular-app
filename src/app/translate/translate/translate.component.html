@@ -1,0 +1,28 @@
+<section>
+  <header>
+    Translate:
+    <hr/>
+  </header>
+
+  <main>
+    <form (ngSubmit)="submit()" [formGroup]="formT">
+      <div style="display: flex">
+        <select type="text" formControlName="fromLang" style="width: 100px; margin-right: 50px">
+          <option *ngFor="let lang of availLang" [ngValue]="lang">{{lang}}</option>
+        </select>
+
+        <input type="text" formControlName="textForTranslate">
+
+        <select type="text" formControlName="toLang" style="width: 100px; margin-left: 50px">
+          <option *ngFor="let lang of availLang" [ngValue]="lang">{{lang}}</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block" [disabled]="formT.invalid">Translate</button>
+    </form>
+  </main>
+
+  <footer>
+    <span>{{ translatedText }}</span>
+  </footer>
+</section>

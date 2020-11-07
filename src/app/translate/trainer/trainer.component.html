@@ -1,0 +1,28 @@
+<section>
+  <header>
+    Today words
+    <hr/>
+  </header>
+
+  <main>
+    <ul *ngIf="words.length; else noWords">
+      <li class="word" *ngFor="let word of words; let i = index">
+        <span>
+          <strong>{{ i + 1 }}</strong>
+          {{ word.lang }} | {{ word.word }}
+        </span>
+        <ul *ngIf="word.translate; else noTranslate" style="width: 70%">
+          <li *ngFor="let translateWord of word.translate; let j = index" style="margin-left: 50px">
+            <app-answer [word]="translateWord" [ind]="j+1"></app-answer>
+          </li>
+        </ul>
+        <ng-template #noTranslate>
+          <p class="text-center">No translate for test...</p>
+        </ng-template>
+      </li>
+    </ul>
+    <ng-template #noWords>
+      <p class="text-center">No words yet...</p>
+    </ng-template>
+  </main>
+</section>

@@ -1,0 +1,7 @@
+<form (ngSubmit)="check()" [formGroup]="form">
+  <div class="word" [class.corrected]="word.status">
+    <span style="width: 150px"><strong>{{ ind }}</strong>{{ word.lang }} |</span>
+    <input type="text" formControlName="answer">
+    <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Check</button>
+  </div>
+</form>
