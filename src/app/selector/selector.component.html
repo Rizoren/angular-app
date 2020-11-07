@@ -1,0 +1,5 @@
+<p class="no-select">
+  <i class="material-icons md-arrow_left" (click)="goTo(-1)"></i>
+  <span>{{ dateService.date | async | moment }}</span>
+  <i class="material-icons md-arrow_right" (click)="goTo(1)"></i>
+</p>

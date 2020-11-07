@@ -1,0 +1,26 @@
+<div class="container">
+  <header>
+    <nav class="navbar">
+      <a routerLink="/">Angular App</a>
+      <ul class="navbar-nav">
+        <li><a class="nav-link" routerLink="/tasks" routerLinkActive="active">Your tasks</a></li>
+        <li><a class="nav-link" routerLink="/translate" routerLinkActive="active">Your words</a></li>
+        <li><a class="nav-link" routerLink="/trainer" routerLinkActive="active">Your trainer</a></li>
+      </ul>
+    </nav>
+    <app-selector></app-selector>
+  </header>
+  <main>
+    <app-calendar></app-calendar>
+  </main>
+  <router-outlet></router-outlet>
+<!--  <div>-->
+<!--    <app-organizer></app-organizer>-->
+<!--  </div>-->
+<!--  <div>-->
+<!--    <app-translate></app-translate>-->
+<!--  </div>-->
+<!--  <div>-->
+<!--    <app-trainer></app-trainer>-->
+<!--  </div>-->
+</div>
